@@ -43,6 +43,9 @@ app.delete('/delete/:id', (req, res) => {
     .catch(err => res.status(500).json({ message: 'Error deleting task' }));
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
 
 
 app.listen(3005,()=>{
